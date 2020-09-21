@@ -5,5 +5,10 @@ class Carrinho {
 
     fun adicionar(vararg produto: Produto) = produtos.addAll(produto)
 
-    fun getValorTotal(): Float = produtos.sumByDouble { it.preco }.toFloat()
+    fun getValorTotal(): Float = produtos.sumByDouble {
+        if (it is ComboSimples)
+            it.precoPromocional
+        else
+            it.preco
+    }.toFloat()
 }
