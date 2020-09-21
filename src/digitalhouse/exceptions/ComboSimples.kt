@@ -1,6 +1,5 @@
 package digitalhouse.exceptions
 
-class ComboSimples(nome: String, preco: Double) : Produto(nome, preco) {
+class ComboSimples(preco: Double, nome: String) : Produto(preco, nome) {
     var precoPromocional: Double = preco * 0.9
-    override fun getPreco(): Double { return precoPromocional }
 }
