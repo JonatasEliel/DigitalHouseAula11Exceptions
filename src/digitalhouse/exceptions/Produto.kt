@@ -1,3 +1,3 @@
 package digitalhouse.exceptions
 
-open class Produto(var preco: Double, var nome: String)
+open class Produto(open var preco: Double, var nome: String)
